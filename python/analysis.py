@@ -78,4 +78,5 @@ plt.savefig('satisfaction_boxplot.png', bbox_inches='tight')
 print("✅ Gráfica 2 guardada: satisfaction_boxplot.png")
 plt.show()
 
+
 print("\n--- ANÁLISIS FINALIZADO ---")
