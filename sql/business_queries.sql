@@ -1,10 +1,10 @@
 -- ===============================================================
--- AN¡LISIS DE NEGOCIO - HOSPITAL OPERATIONS 2025
+-- AN√ÅLISIS DE NEGOCIO - HOSPITAL OPERATIONS 2025
 -- Objetivo: Extraer insights clave directamente desde la BD
 -- ===============================================================
 
--- 1. KPI B¡SICO: Panorama General
--- Muestra la escala total de la operaciÛn (Demanda vs. Capacidad).
+-- 1. KPI B√ÅSICO: Panorama General
+-- Muestra la escala total de la operaci√≥n (Demanda vs. Capacidad).
 SELECT 
     SUM(patients_request) AS total_demanda,
     SUM(patients_admitted) AS total_admitidos,
@@ -14,13 +14,13 @@ SELECT
 FROM Services_Weekly;
 
 
--- 2. CUELLOS DE BOTELLA (An·lisis por Servicio)
--- øQuÈ departamento est· rechazando m·s pacientes?
+-- 2. CUELLOS DE BOTELLA (An√°lisis por Servicio)
+-- ¬øQu√© departamento est√° rechazando m√°s pacientes?
 SELECT 
     service, 
     SUM(patients_request) AS demanda_total,
     SUM(patients_refused) AS pacientes_rechazados,
-    -- C·lculo de % dentro de SQL
+    -- C√°lculo de % dentro de SQL
     ROUND((SUM(patients_refused) * 100.0 / NULLIF(SUM(patients_request), 0)), 2) AS tasa_rechazo_pct
 FROM Services_Weekly
 GROUP BY service
@@ -28,7 +28,7 @@ ORDER BY tasa_rechazo_pct DESC;
 
 
 -- 3. PRODUCTIVIDAD DEL PERSONAL (Top 10 Doctores)
--- Cruzamos la tabla de Horarios con la de Personal para ver quiÈn trabajÛ m·s.
+-- Cruzamos la tabla de Horarios con la de Personal para ver qui√©n trabaj√≥ m√°s.
 SELECT TOP 10
     s.staff_name,
     s.role,
@@ -43,7 +43,7 @@ ORDER BY dias_presentes DESC;
 
 
 -- 4. RANKING DE CALIDAD (Window Functions)
--- Clasifica las semanas de mejor a peor seg˙n satisfacciÛn, por cada servicio.
+-- Clasifica las semanas de mejor a peor seg√∫n satisfacci√≥n, por cada servicio.
 SELECT 
     week,
     service,
