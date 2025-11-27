@@ -53,9 +53,10 @@ Este proyecto integra 4 herramientas clave para demostrar versatilidad técnica 
 
 ```text
 Hospital_Data_Analysis/
-├── data/                  # Archivos CSV crudos (Anonymized)
-├── sql/                   # Scripts: Schema, ETL Process & Business Queries
-├── python/                # Jupyter Notebook (EDA) & Gráficos exportados
-├── powerbi/               # Archivo .pbix (Dashboard Interactivo)
-├── excel/                 # Herramienta de Buscador de Staff & Reportes
-└── README.md              # Documentación del Proyecto
+├── data/                  # Datasets originales (CSV)
+├── excel/                 # Reporte de Staff & Buscador Interactivo
+├── powerbi/               # Dashboard (.pbix)
+├── python/                # Notebook de Análisis (EDA) & Gráficos
+├── sql/                   # Scripts SQL (Schema, ETL, Queries)
+├── dashboard_preview.png  # Vista previa del Dashboard
+└── README.md              # Documentación del proyecto
