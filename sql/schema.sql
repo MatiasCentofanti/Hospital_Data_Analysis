@@ -1,14 +1,14 @@
--- 1. Tabla de Empleados (Dimensi髇)
--- Esta tabla guarda la info 鷑ica de cada m閐ico/enfermero
+-- 1. Tabla de Empleados (Dimensi贸n)
+-- Esta tabla guarda la info 煤nica de cada m茅dico/enfermero
 CREATE TABLE Staff (
-    staff_id VARCHAR(50) PRIMARY KEY,  -- PK: Identificador 鷑ico
+    staff_id VARCHAR(50) PRIMARY KEY,  -- PK: Identificador 煤nico
     staff_name VARCHAR(100),
     role VARCHAR(50),                  -- Ejemplo: Doctor, Nurse
     service VARCHAR(50)                -- Ejemplo: ICU, Emergency
 );
 
--- 2. Tabla de Pacientes (Dimensi髇)
--- Informaci髇 de cada persona que entra al hospital
+-- 2. Tabla de Pacientes (Dimensi贸n)
+-- Informaci贸n de cada persona que entra al hospital
 CREATE TABLE Patients (
     patient_id VARCHAR(50) PRIMARY KEY,
     name VARCHAR(100),
@@ -28,10 +28,10 @@ CREATE TABLE Staff_Schedule (
     role VARCHAR(50),
     service VARCHAR(50),
     present INT,                       -- 1 = Presente, 0 = Ausente
-    FOREIGN KEY (staff_id) REFERENCES Staff(staff_id) -- Conexi髇 (Relaci髇)
+    FOREIGN KEY (staff_id) REFERENCES Staff(staff_id) -- Conexi贸n (Relaci贸n)
 );
 
--- 4. Tabla de M閠ricas Semanales (Hechos Agregados)
+-- 4. Tabla de M茅tricas Semanales (Hechos Agregados)
 -- Resumen operativo por semana y servicio
 CREATE TABLE Services_Weekly (
     week INT,
