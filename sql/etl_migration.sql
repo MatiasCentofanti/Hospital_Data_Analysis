@@ -1,5 +1,5 @@
 -- ===============================================================
--- MIGRACIÓN DE DATOS (ETL)
+-- MIGRACIÃ“N DE DATOS (ETL)
 -- Trasvase de datos desde las tablas CSV importadas a las tablas oficiales
 -- ===============================================================
 
@@ -18,8 +18,8 @@ INSERT INTO Services_Weekly (week, month, service, available_beds, patients_requ
 SELECT week, month, service, available_beds, patients_request, patients_admitted, patients_refused, patient_satisfaction, staff_morale, event
 FROM [services_weekly.csv];
 
--- 4. Migrar STAFF_SCHEDULE (Último, porque depende de Staff)
--- Como los IDs están mal en los CSVs, unimos las tablas usando 'staff_name'
+-- 4. Migrar STAFF_SCHEDULE (Ãšltimo, porque depende de Staff)
+-- Como los IDs estÃ¡n mal en los CSVs, unimos las tablas usando 'staff_name'
 -- y traemos el 'staff_id' CORRECTO de la tabla Staff.
 INSERT INTO Staff_Schedule (week, staff_id, staff_name, role, service, present)
 SELECT 
@@ -33,8 +33,8 @@ FROM [staff_schedule.csv] sch
 INNER JOIN Staff s ON sch.staff_name = s.staff_name; -- Cruzamos por Nombre
 
 -- ===============================================================
--- VERIFICACIÓN DE CARGA
--- Confirma que los números coinciden
+-- VERIFICACIÃ“N DE CARGA
+-- Confirma que los nÃºmeros coinciden
 -- ===============================================================
 SELECT 'Staff' as Tabla, COUNT(*) as Total_Filas FROM Staff
 UNION ALL
