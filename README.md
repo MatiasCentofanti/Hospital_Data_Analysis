@@ -21,9 +21,10 @@ El objetivo principal fue diagnosticar las causas de la saturación en servicios
 Este proyecto integra 4 herramientas clave para demostrar versatilidad técnica y de negocio:
 
 ### 1. SQL Server (Ingeniería de Datos & ETL)
-* **Motor:** Microsoft SQL Server Management Studio (SSMS).
+* **Objetivo:** Demostrar la capacidad de transformar datos médicos desestructurados en una arquitectura relacional sólida para la toma de decisiones clínicas.
 * **Modelado:** Diseño de esquema relacional (`Primary Keys`, `Foreign Keys`).
-* **ETL & Limpieza de Datos (El Desafío):** * *Problema:* Los datasets crudos presentaban inconsistencias graves; los IDs de los empleados en la tabla de horarios no coincidían con la tabla maestra de personal.
+* **ETL & Data Cleansing:**
+    * *Problema:* Los datasets crudos presentaban inconsistencias graves; los IDs de los empleados en la tabla de horarios no coincidían con la tabla maestra de personal.
     * *Solución:* Desarrollé un script de migración utilizando `INNER JOIN` basado en **nombres** y funciones de limpieza (`TRIM`) para reconstruir la integridad referencial y recuperar miles de registros que de otro modo se habrían perdido.
 * **Análisis:** Uso de `Window Functions` (`RANK`, `PARTITION BY`) para clasificar el rendimiento semanal por servicio.
 
@@ -33,9 +34,9 @@ Este proyecto integra 4 herramientas clave para demostrar versatilidad técnica 
 * **Validación Estadística:** Generación de una Matriz de Correlación (Heatmap) que reveló patrones ocultos entre la ocupación de camas y la satisfacción.
 
 ### 3. Power BI (Business Intelligence)
-* **Dashboard:** "Hospital Operations Dashboard 2025".
-* **Diseño:** Interfaz limpia orientada a la toma de decisiones con navegación por KPIs.
-* **Storytelling:** Gráfico de "Dinámica Semanal" que visualiza cómo la caída en la moral del equipo precede a las caídas en la satisfacción del cliente.
+* **Conexión:** Conexión directa a la base de datos Hospital_DB para asegurar la integridad de los datos clínicos.
+* **Modelado:** Configuración manual de relaciones 1:N entre tablas de hechos (Admisiones/Facturación) y dimensiones (Médicos/Pacientes) en el entorno de BI.
+* **isualización de KPIs:** Dashboard ejecutivo con enfoque en Ocupación de Camas (gestión de capacidad) y Costo Medio por Paciente (eficiencia financiera).
 
 ### 4. Excel (Herramientas de Gestión)
 * **Reporte Corporativo:** Tablas dinámicas para el conteo de *headcount* y roles.
