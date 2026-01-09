@@ -5,7 +5,7 @@
 ![Microsoft Excel](https://img.shields.io/badge/Microsoft_Excel-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white)
 
 ![Power BI Dashboard](dashboard.png)
-*(Vista previa del Dashboard Ejecutivo)*
+*(Vista previa del Dashboard)*
 
 ## 📌 Resumen del Proyecto
 Este proyecto es un ejercicio **"Full Stack Data Analyst"** que simula el ciclo de vida completo de los datos para una red hospitalaria. 
