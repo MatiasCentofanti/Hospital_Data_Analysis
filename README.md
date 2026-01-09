@@ -36,7 +36,7 @@ Este proyecto integra 4 herramientas clave para demostrar versatilidad técnica 
 ### 3. Power BI (Business Intelligence)
 * **Conexión:** Conexión directa a la base de datos Hospital_DB para asegurar la integridad de los datos clínicos.
 * **Modelado:** Configuración manual de relaciones 1:N entre tablas de hechos (Admisiones/Facturación) y dimensiones (Médicos/Pacientes) en el entorno de BI.
-* **isualización de KPIs:** Dashboard ejecutivo con enfoque en Ocupación de Camas (gestión de capacidad) y Costo Medio por Paciente (eficiencia financiera).
+* **Visualización de KPIs:** Dashboard ejecutivo con enfoque en Ocupación de Camas (gestión de capacidad) y Costo Medio por Paciente (eficiencia financiera).
 
 ### 4. Excel (Herramientas de Gestión)
 * **Reporte Corporativo:** Tablas dinámicas para el conteo de *headcount* y roles.
